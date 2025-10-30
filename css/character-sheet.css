@@ -1,0 +1,106 @@
+/* Estilos para a seção de listagem de fichas */
+.sheet-listing-section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.sheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card para criar nova ficha */
+.create-sheet-card {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    min-height: 300px; /* Altura mínima igual aos cards de personagem */
+}
+
+.create-sheet-card:hover {
+    border-color: #ffc107;
+    color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.create-sheet-card .inner-card {
+    text-align: center;
+}
+
+.create-sheet-card span {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.create-sheet-card p {
+    margin-top: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+}
+
+/* Estilos para os cards de fichas existentes (a serem adicionados via JS) */
+.character-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.character-card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 28px;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.character-card p {
+    font-family: 'Comic Neue', cursive;
+    font-size: 16px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.character-card .card-footer {
+    font-size: 14px;
+    color: #777;
+    text-align: right;
+    font-style: italic;
+}
+
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(0,0,0,0.6);
+}

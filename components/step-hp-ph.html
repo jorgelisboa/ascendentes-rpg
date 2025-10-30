@@ -1,0 +1,95 @@
+<div class="step-content">
+    <h2>Pontos de Vida e Poder</h2>
+
+    <div class="hp-ph-section">
+        <h3>🩸 Pontos de Vida (HP)</h3>
+        <p>Seus Pontos de Vida (HP) representam sua vitalidade e resistência física.</p>
+        <p>O valor base de HP é determinado pela sua categoria de poder e pelo seu Bônus de Vigor.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>HP Base</th>
+                    <th>Custo em PP</th>
+                    <th>Requisito de Vigor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Padrão</td>
+                    <td>10 + Bônus de Vigor</td>
+                    <td>0 PP</td>
+                    <td>Nenhum</td>
+                </tr>
+                <tr>
+                    <td>Reforçado</td>
+                    <td>15 + Bônus de Vigor</td>
+                    <td>10 PP</td>
+                    <td>Vigor &ge; 1</td>
+                </tr>
+                <tr>
+                    <td>Invulnerável</td>
+                    <td>20 + Bônus de Vigor</td>
+                    <td>20 PP</td>
+                    <td>Vigor &ge; 5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <label for="hp-category">Escolha a Categoria de HP:</label>
+        <select id="hp-category">
+            <option value="standard">Padrão (0 PP)</option>
+            <option value="10pp">Reforçado (10 PP)</option>
+            <option value="20pp">Invulnerável (20 PP)</option>
+        </select>
+
+        <p class="hp-display">HP: <span id="current-hp">0</span> / <span id="max-hp">0</span></p>
+    </div>
+
+    <div class="hp-ph-section">
+        <h3>✨ Pontos de Poder (PH)</h3>
+        <p>Seus Pontos de Poder (PH) representam sua capacidade de usar habilidades especiais e poderes.</p>
+        <p>O valor base de PH é determinado pela sua categoria de poder e pelo seu Bônus de Intelecto.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>PH Base</th>
+                    <th>Custo em PP</th>
+                    <th>Requisito de Intelecto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Padrão</td>
+                    <td>10 + Bônus de Intelecto</td>
+                    <td>0 PP</td>
+                    <td>Nenhum</td>
+                </tr>
+                <tr>
+                    <td>Ampliado</td>
+                    <td>15 + Bônus de Intelecto</td>
+                    <td>10 PP</td>
+                    <td>Intelecto &ge; 1</td>
+                </tr>
+                <tr>
+                    <td>Místico</td>
+                    <td>20 + Bônus de Intelecto</td>
+                    <td>20 PP</td>
+                    <td>Intelecto &ge; 5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <label for="ph-category">Escolha a Categoria de PH:</label>
+        <select id="ph-category">
+            <option value="standard">Padrão (0 PP)</option>
+            <option value="10pp">Ampliado (10 PP)</option>
+            <option value="20pp">Místico (20 PP)</option>
+        </select>
+
+        <p class="ph-display">PH: <span id="current-ph">0</span> / <span id="max-ph">0</span></p>
+    </div>
+</div>

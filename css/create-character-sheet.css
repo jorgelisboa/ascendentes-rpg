@@ -1,0 +1,184 @@
+/* Estilos para a página de criação de personagem */
+.character-creation-section {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    color: #eee;
+}
+
+.character-creation-section .container {
+    max-width: 800px;
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#step-container {
+    min-height: 400px; /* Garante espaço para o conteúdo do passo */
+    margin-bottom: 30px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.navigation-buttons .btn {
+    padding: 10px 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Estilos para os componentes de passo */
+.step-content h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 36px;
+    color: #ffc107;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.step-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 18px;
+    color: #eee;
+}
+
+.step-content input[type="text"],
+.step-content input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #eee;
+    font-size: 16px;
+}
+
+.step-content input[type="text"]:focus,
+.step-content input[type="number"]:focus {
+    border-color: #ffc107;
+    outline: none;
+}
+
+.attribute-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.attribute-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.attribute-item label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.attribute-item input {
+    width: 80px;
+    padding: 8px;
+    text-align: center;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.attribute-item input::-webkit-outer-spin-button,
+.attribute-item input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.attribute-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.pp-display {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #ffc107;
+}
+
+.hp-ph-section {
+    margin-top: 30px;
+}
+
+.hp-ph-section h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.hp-ph-section p {
+    font-family: 'Comic Neue', cursive;
+    margin-bottom: 10px;
+}
+
+.hp-ph-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.hp-ph-section th,
+.hp-ph-section td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Comic Neue', cursive;
+}
+
+.hp-ph-section th {
+    background-color: #444;
+    color: #ffc107;
+}
+
+.hp-ph-section td {
+    background-color: #333;
+}
+
+.hp-ph-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #eee;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hp-ph-section select:focus {
+    border-color: #ffc107;
+    outline: none;
+}
+
+.hp-display,
+.ph-display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #eee;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.hp-display span,
+.ph-display span {
+    color: #ffc107;
+}
