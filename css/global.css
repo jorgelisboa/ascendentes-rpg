@@ -1,0 +1,300 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Comic+Neue:wght@400;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --yellow-gold: #FFD700;
+    --crimson-red: #DC143C;
+    --royal-blue: #1E90FF;
+    --deep-black: #2C1810;
+    --vintage-paper: #FFF8DC;
+}
+
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.6;
+    color: var(--deep-black);
+    background-color: var(--vintage-paper);
+    background-image: radial-gradient(circle, var(--vintage-paper) 85%, rgba(0,0,0,0.1) 100%); /* Efeito de papel */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Bangers', cursive;
+    color: var(--crimson-red);
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 var(--deep-black); /* Sombra dramática */
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 4.5em;
+    color: var(--yellow-gold);
+    -webkit-text-stroke: 2px var(--deep-black); /* Contorno para h1 */
+    text-stroke: 2px var(--deep-black);
+}
+
+h2 {
+    font-size: 3.5em;
+    color: var(--royal-blue);
+    -webkit-text-stroke: 1.5px var(--deep-black);
+    text-stroke: 1.5px var(--deep-black);
+}
+
+h3 {
+    font-size: 2.5em;
+    color: var(--crimson-red);
+    -webkit-text-stroke: 1px var(--deep-black);
+    text-stroke: 1px var(--deep-black);
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+a.btn {
+    display: inline-block;
+    background-color: var(--crimson-red);
+    color: var(--vintage-paper);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    border: 4px solid var(--deep-black);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0 var(--deep-black); /* Sombra deslocada */
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+a.btn:hover {
+    background-color: var(--royal-blue);
+    color: var(--yellow-gold);
+    box-shadow: 4px 4px 0 var(--deep-black);
+    transform: translate(4px, 4px);
+}
+
+/* Efeito Halftone (pontinhos de impressão antiga) */
+.halftone-overlay {
+    position: relative;
+}
+
+.halftone-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Header - Hero Section */
+.hero-section {
+    background-color: var(--royal-blue);
+    background-image: url('https://via.placeholder.com/1500x600/1E90FF/FFF8DC?text=HEROES+FIGHTING'); /* Placeholder para imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: var(--vintage-paper);
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 8px solid var(--deep-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    margin-bottom: 10px;
+    font-size: 6em;
+    color: var(--yellow-gold);
+    -webkit-text-stroke: 3px var(--deep-black);
+    text-stroke: 3px var(--deep-black);
+}
+
+.hero-section p {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 0 var(--deep-black);
+    color: var(--vintage-paper);
+}
+
+/* World and System Section */
+.world-system-section {
+    padding: 60px 0;
+    background-color: var(--vintage-paper);
+    border-bottom: 8px solid var(--deep-black);
+    position: relative;
+}
+
+.world-system-section h2, .world-system-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.world-system-section p {
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--yellow-gold);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 8px solid var(--deep-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-section .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-card {
+    background-color: var(--vintage-paper);
+    border: 6px solid var(--deep-black);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 0 var(--deep-black);
+    max-width: 450px;
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cta-card:hover {
+    transform: translateY(-10px);
+}
+
+.cta-card h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--royal-blue);
+    -webkit-text-stroke: 1.2px var(--deep-black);
+    text-stroke: 1.2px var(--deep-black);
+}
+
+.cta-card p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--deep-black);
+    color: var(--vintage-paper);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    border-top: 4px solid var(--crimson-red);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 4em;
+    }
+
+    .hero-section p {
+        font-size: 1.4em;
+    }
+
+    .cta-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-card {
+        max-width: 90%;
+    }
+
+    a.btn {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+}

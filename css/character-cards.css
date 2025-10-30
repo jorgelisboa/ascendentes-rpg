@@ -1,0 +1,98 @@
+/* Character Grid Styles */
+.characters-grid-section {
+    padding: 2rem 0;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.character-card {
+    background: var(--card-bg, #2a2a2a);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 320px;
+    position: relative;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.character-card.new-character {
+    border: 3px dashed rgba(84, 67, 67, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.new-character .card-content {
+    padding: 2rem;
+}
+
+.new-character .add-icon {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
+.new-character h3 {
+    color: rgba(255, 255, 255);
+    margin-bottom: 0.5rem;
+}
+
+.new-character p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para cards de heróis existentes */
+.character-card:not(.new-character) {
+    background: linear-gradient(to bottom, var(--card-accent, #4a4a4a) 120px, var(--card-bg, #2a2a2a) 120px);
+}
+
+.character-card .hero-portrait {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-info {
+    padding: 1.5rem;
+}
+
+.hero-name {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.hero-origin {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .characters-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}

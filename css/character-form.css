@@ -1,0 +1,324 @@
+/* css/character-form.css */
+
+/* Estilos que transformam o formulário em uma ficha de personagem de quadrinhos. */
+
+body {
+    /* Força o fundo de papel vintage definido no global.css */
+    background-color: var(--vintage-paper) !important;
+}
+
+.wizard-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    background-color: var(--vintage-paper);
+    border: 6px solid var(--deep-black);
+    border-radius: 10px;
+    box-shadow: 12px 12px 0 var(--deep-black);
+}
+
+.wizard-step h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5em;
+    color: var(--royal-blue);
+    text-align: center;
+    -webkit-text-stroke: 1.5px var(--deep-black);
+    text-stroke: 1.5px var(--deep-black);
+    text-shadow: 4px 4px 0 var(--deep-black);
+    margin-bottom: 2.5rem;
+}
+
+.path-buttons {
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4em;
+    padding: 12px 25px;
+    border: 4px solid var(--deep-black);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0 var(--deep-black);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--crimson-red);
+    color: var(--vintage-paper);
+}
+
+.btn-primary:hover {
+    background-color: var(--royal-blue);
+    color: var(--yellow-gold);
+    box-shadow: 4px 4px 0 var(--deep-black);
+    transform: translate(4px, 4px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--deep-black);
+    border-color: var(--deep-black);
+}
+
+.btn-secondary:hover {
+    background-color: var(--deep-black);
+    color: var(--vintage-paper);
+    box-shadow: 4px 4px 0 var(--deep-black);
+    transform: translate(4px, 4px);
+}
+
+.form-section {
+    margin-top: 2rem;
+    border-top: 4px dashed var(--deep-black);
+    padding-top: 2rem;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    color: var(--deep-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.form-group label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3em;
+    color: var(--deep-black);
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 3px solid var(--deep-black);
+    background-color: var(--vintage-paper);
+    color: var(--deep-black);
+    box-shadow: inset 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    background-color: #fff;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="16" height="16" fill="%232C1810" class="bi bi-chevron-down" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 1.2rem auto;
+}
+
+input[type="file"] {
+    font-family: 'Comic Neue', cursive;
+    color: var(--deep-black);
+}
+
+input[type="file"]::file-selector-button {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border: 3px solid var(--deep-black);
+    border-radius: 4px;
+    background-color: var(--yellow-gold);
+    color: var(--deep-black);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: var(--royal-blue);
+    color: var(--vintage-paper);
+}
+
+/* --- Passo 2: O Custo (Definindo seu Orçamento) --- */
+.pp-display {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Bangers', cursive;
+    color: var(--crimson-red);
+    -webkit-text-stroke: 1.5px var(--deep-black);
+    text-stroke: 1.5px var(--deep-black);
+    text-shadow: 4px 4px 0 var(--deep-black);
+    font-size: 2em;
+}
+
+.pp-display #pp-total {
+    font-size: 3em; /* Muito grande */
+    display: block;
+    line-height: 1;
+    color: var(--yellow-gold);
+    -webkit-text-stroke: 2px var(--deep-black);
+    text-stroke: 2px var(--deep-black);
+}
+
+.pp-explicacao {
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
+    color: var(--deep-black);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.1em;
+}
+
+.description-box {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px dashed var(--deep-black);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: 'Comic Neue', cursive;
+    color: var(--deep-black);
+    min-height: 50px;
+}
+
+.description-box p {
+    margin-bottom: 0.5rem;
+}
+
+.description-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--vintage-paper);
+    border: 6px solid var(--deep-black);
+    border-radius: 10px;
+    box-shadow: 15px 15px 0 var(--deep-black);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-content h3 {
+    font-family: 'Bangers', cursive;
+    color: var(--crimson-red);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    -webkit-text-stroke: 1px var(--deep-black);
+    text-stroke: 1px var(--deep-black);
+    text-shadow: 2px 2px 0 var(--deep-black);
+}
+
+.modal-content fieldset {
+    border: 2px solid var(--deep-black);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+.modal-content fieldset legend {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2em;
+    color: var(--deep-black);
+    padding: 0 0.5rem;
+}
+
+.modal-content .estigma-option {
+    margin-bottom: 0.8rem;
+    font-family: 'Comic Neue', cursive;
+    color: var(--deep-black);
+}
+
+.modal-content .estigma-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-content .estigma-option input[type="checkbox"] {
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--royal-blue);
+    border: 2px solid var(--deep-black);
+}
+
+.modal-content .estigma-option .estigma-bonus {
+    font-weight: bold;
+    color: var(--crimson-red);
+    margin-left: 0.5rem;
+}
+
+.modal-content .estigma-option .estigma-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 2.3rem; /* Alinha com o texto do label */
+    display: block;
+}
+
+.modal-content .btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.pp-sumario {
+    background-color: rgba(0, 0, 0, 0.08);
+    border: 3px solid var(--deep-black);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-family: 'Comic Neue', cursive;
+    color: var(--deep-black);
+}
+
+.pp-sumario p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+}
+
+.pp-sumario strong {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    color: var(--crimson-red);
+    -webkit-text-stroke: 0.5px var(--deep-black);
+    text-stroke: 0.5px var(--deep-black);
+}
+
+.pp-sumario span {
+    font-weight: bold;
+    color: var(--royal-blue);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
